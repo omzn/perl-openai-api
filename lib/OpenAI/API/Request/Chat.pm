@@ -28,6 +28,7 @@ has presence_penalty  => ( is => 'rw', isa => Num, );
 has frequency_penalty => ( is => 'rw', isa => Num, );
 has logit_bias        => ( is => 'rw', isa => Map [ Int, Int ], );
 has user              => ( is => 'rw', isa => Str, );
+has tools             => ( is => 'rw', isa => ArrayRef [HashRef] );
 
 sub endpoint { 'chat/completions' }
 sub method   { 'POST' }
